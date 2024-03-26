@@ -82,7 +82,7 @@ export default {
 <style scoped>
 
 .logo {
-    max-width: 100px;
+    max-width: 80px;
   }
 
 .registration-page {

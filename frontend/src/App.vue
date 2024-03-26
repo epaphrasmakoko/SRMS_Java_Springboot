@@ -1,20 +1,12 @@
 <template>
   <div id="app">
-    <LoginPage />
-    <RegistrationPage />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import LoginPage from './components/LoginPage.vue'
-import RegistrationPage from './components/RegistrationPage.vue'
-
 export default {
   name: 'App',
-  components: {
-    LoginPage,
-    RegistrationPage
-  }
 }
 </script>
 
@@ -25,7 +17,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 20px;
 }
 
 </style>

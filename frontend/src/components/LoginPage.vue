@@ -1,11 +1,14 @@
 <template>
-    <div class="login-page"> <!-- Apply the .login-page class here -->
+    <div class="login-page">
       <div class="container">
         <div class="row justify-content-center mt-5">
           <div class="col-md-6">
             <div class="card">
-              <img src="@/assets/StudentLogo.png" alt="Logo" class="logo">
-              <h2 class="card-title">Login</h2><br>
+              <figure>
+                <figcaption><strong>Student Registration Management System</strong></figcaption>
+                <img src="@/assets/StudentLogo.png" alt="Logo" class="logo">
+              </figure>
+              <h2 class="card-title">Login</h2>
               <div class="card-body">
                 <form @submit.prevent="login" class="login-form">
                   <div class="form-group">
@@ -46,7 +49,6 @@
   </script>
   
   <style scoped>
-  /* Add your CSS styles here */
   
   .login-page {
     display: flex;
@@ -58,7 +60,7 @@
   .login-form {
     width: 400px;
     padding: 40px;
-    background-color: #f8f9fa;
+    background-color: #e0e0e0;
     border-radius: 20px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   }
@@ -79,7 +81,7 @@
   
   input[type="text"],
   input[type="password"] {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     border: 1px solid #ced4da;
     border-radius: 5px;
