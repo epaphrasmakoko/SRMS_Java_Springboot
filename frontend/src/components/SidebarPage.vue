@@ -4,7 +4,7 @@
       <ul>
         <!-- Sidebar links -->
         <li><router-link to="/dashboard">Dashboard</router-link></li>
-        <li><router-link to="/profile">Profile</router-link></li>
+        <li><router-link to="/dashboard/student-profile">Profile</router-link></li>
         <!-- Add more sidebar links as needed -->
       </ul>
     </aside>

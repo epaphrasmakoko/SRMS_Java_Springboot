@@ -3,14 +3,15 @@
     <header class="header">
       <div class="logo">
         <!-- Your logo or branding goes here -->
-        <img src="/path/to/your/logo.png" alt="Logo">
+        <img src="@/assets/StudentLogo.png" alt="Logo">
         <span>My Dashboard</span>
       </div>
       <nav class="nav">
         <!-- Navigation links -->
         <router-link to="/dashboard">Dashboard</router-link>
-        <router-link to="/profile">Profile</router-link>
-        <!-- Add more links as needed -->
+        <router-link to="/dashboard/student-profile">Profile</router-link>
+        <router-link to="/">Logout</router-link>
+
       </nav>
       <div class="profile">
         <!-- User profile information -->

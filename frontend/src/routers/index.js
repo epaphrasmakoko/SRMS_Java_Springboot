@@ -13,7 +13,7 @@ const routes = [
   { path: '/register', component: RegistrationPage },
   { path: '/dashboard', component: Dashboard,
     children: [
-      { path: '', redirect: 'enrolled-courses' },
+      // { path: '', redirect: 'personal-information' },
       { path: 'enrolled-courses', component: EnrolledCourses },
       { path: 'personal-information', component: PersonalInformation },
       { path: 'student-profile', component: StudentProfile }
