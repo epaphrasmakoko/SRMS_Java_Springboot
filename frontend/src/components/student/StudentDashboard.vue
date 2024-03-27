@@ -1,20 +1,20 @@
 <template>
     <div class="dashboard">
-      <!-- Include the header component -->
       <Header />
   
       <div class="main">
-        <!-- Include the sidebar component -->
         <Sidebar />
   
         <!-- Main content area -->
         <div class="content">
-          <h1>Welcome to the Student Dashboard</h1>
           <router-view></router-view>
+          <div>
+            <h1>Welcome Epa</h1>
+            <img src="@/assets/graduate.jpeg" alt="Logo" class="">
+          </div>
         </div>
       </div>
   
-      <!-- Include the footer component -->
       <Footer />
     </div>
   </template>
@@ -38,7 +38,8 @@
   .dashboard {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 150vh;
+    margin: 0px;
   }
   
   .main {
@@ -47,8 +48,13 @@
   }
   
   .content {
+    display: flex;
+    justify-content: space-around;
     flex: 1;
     padding: 1rem;
+  }
+  img {
+    max-width: 30rem;
   }
   </style>
   

@@ -1,23 +1,22 @@
 <template>
     <div class="personal-information">
-      <h2>Personal Information</h2>
+      <h2><u>Personal Information</u></h2>
       <div class="info-item">
-        <span class="label">Name:</span>
-        <span>{{ fullName }}</span>
+        <span class="label"><strong>Name:</strong></span>
+        <span class="details">Epaphras Makoko</span>
       </div>
       <div class="info-item">
-        <span class="label">Registration Number:</span>
-        <span>{{ registrationNumber }}</span>
+        <span class="label"><strong>Registration Number:</strong></span>
+        <span class="details">{{ registrationNumber }}</span>
       </div>
       <div class="info-item">
-        <span class="label">Email:</span>
-        <span>{{ email }}</span>
+        <span class="label"><strong>Email:</strong></span>
+        <span class="details">{{ email }}</span>
       </div>
       <div class="info-item">
-        <span class="label">Phone Number:</span>
-        <span>{{ phoneNumber }}</span>
+        <span class="label"><strong>Phone Number:</strong></span>
+        <span class="details">{{ phoneNumber }}</span>
       </div>
-      <!-- Add more personal details as needed -->
     </div>
   </template>
   
@@ -28,18 +27,22 @@
       registrationNumber: String,
       email: String,
       phoneNumber: String
-      // Add more props for additional personal information
     }
   };
   </script>
   
   <style scoped>
   .personal-information {
+    text-align: left;
     margin-bottom: 20px;
+  }
+
+  .personal-information > h2 {
+    margin-bottom: 30px;
   }
   
   .info-item {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   
   .label {

@@ -1,6 +1,6 @@
 <template>
     <div class="enrolled-courses">
-      <h2>Enrolled Courses</h2>
+      <h2><strong><u>Courses</u></strong></h2>
       <div v-for="(course, index) in courses" :key="index">
         <h3>{{ course.name }}</h3>
         <div class="semester">

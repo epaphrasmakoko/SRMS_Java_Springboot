@@ -1,41 +1,39 @@
 <template>
-  <div class="registration-page">
+  <div class="registration-page vh-100 ">
     <div class="container">
-      <div class="row justify-content-center mt-5">
+      <div class="row justify-content-center ">
         <div class="col-md-6">
-          <div class="card">
-            <img src="@/assets/StudentLogo.png" alt="Logo" class="logo">
+          <img src="@/assets/StudentLogo.png" alt="Logo" class="logo">
+          <div class="card form1">
             <h2 class="card-title">Student Registration</h2><br>
-            <div class="card-body">
+            <div class="card-body scrollable-card-body">
               <form @submit.prevent="register" class="registration-form">
                 <div class="form-group">
-                  <label for="firstName">First Name</label>
-                  <input type="text" id="firstName" v-model="firstName" class="form-control" required>
+                  <input type="text" id="firstName" v-model="firstName" class="form-control" required placeholder="First Name">
                 </div>
                 <div class="form-group">
-                  <label for="middleName">Middle Name</label>
-                  <input type="text" id="middleName" v-model="middleName" class="form-control">
+                  <input type="text" id="middleName" v-model="middleName" class="form-control"  required placeholder="Middle Name">
                 </div>
                 <div class="form-group">
-                  <label for="lastName">Last Name</label>
-                  <input type="text" id="lastName" v-model="lastName" class="form-control" required>
+                  <input type="text" id="lastName" v-model="lastName" class="form-control" required placeholder="Last Name">
                 </div>
                 <div class="form-group">
-                  <label for="registrationNumber">Registration Number</label>
-                  <input type="text" id="registrationNumber" v-model="registrationNumber" class="form-control" required>
+                  <input type="text" id="registrationNumber" v-model="registrationNumber" class="form-control" required placeholder="Registration Number">
+                </div>
+                <div class="form-group">
+                  <input type="tel" id="phoneNumber" v-model="phoneNumber" class="form-control" required placeholder="Phone Number">
+                </div>
+                <div class="form-group">
+                  <input type="email" id="email" v-model="phoneNumber" class="form-control" required placeholder="Email">
                 </div>
                 <div class="form-group">
                   <label for="dob">Date of Birth</label>
                   <input type="date" id="dob" v-model="dob" class="form-control" required>
                 </div>
                 <div class="form-group">
-                  <label for="phoneNumber">Phone Number</label>
-                  <input type="tel" id="phoneNumber" v-model="phoneNumber" class="form-control" required>
-                </div>
-                <div class="form-group">
                   <label for="courses">Courses</label>
                   <select id="courses" v-model="selectedCourse" class="form-control" required>
-                   <option value="" disabled selected>Select Course</option>
+                   <option value="Select Course" disabled selected>Select Course</option>
                    <option v-for="course in courses" :key="course.id" :value="course.id">{{ course.name }}</option>
                   </select>
                 </div>
@@ -60,11 +58,10 @@ export default {
       dob: '',
       phoneNumber: '',
       selectedCourse: null, // Variable to store the selected course
-      courses: [ // Sample course data (replace with actual course data)
+      courses: [ 
         { id: 1, name: 'CSDFE' },
         { id: 2, name: 'CNISE' },
         { id: 3, name: 'SE' }
-        // Add more courses as needed
       ]
     };
   },
@@ -80,28 +77,26 @@ export default {
 </script>
 
 <style scoped>
+.scrollable-card-body {
+  max-height: 75vh; /* Set a maximum height for the card body */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
 
 .logo {
+  padding-top: 5px;
     max-width: 80px;
   }
 
-.registration-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
 .registration-form {
-  width: 300px;
+  width: 100%;
   padding: 40px;
-  background-color: #f8f9fa;
+  background-color: #e0e0e0;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 label {
@@ -109,33 +104,12 @@ label {
   font-weight: bold;
 }
 
-input[type="text"],
-input[type="tel"],
-input[type="date"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ced4da;
-  border-radius: 5px;
-}
-
-select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ced4da;
-  border-radius: 5px;
-}
-
 button {
   width: 100%;
   padding: 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
-button:hover {
-  background-color: #0056b3;
-}
+.form1 {
+    border: 0cap;
+  }
 </style>

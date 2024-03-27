@@ -2,7 +2,7 @@
 <template>
     <footer class="footer">
       <!-- Footer content -->
-      <p>&copy; 2024 My Dashboard. All rights reserved.</p>
+      <p>&copy; 2024 CSDFE3 Group. All rights reserved.</p>
     </footer>
   </template>
   
@@ -15,7 +15,7 @@
   <style scoped>
   /* Footer styles here */
   .footer {
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
     padding: 1rem;
     text-align: center;

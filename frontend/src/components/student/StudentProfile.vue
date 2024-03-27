@@ -11,6 +11,10 @@
           <input type="tel" id="phoneNumber" v-model="phoneNumber" class="form-control" required>
         </div>
         <div class="form-group">
+          <label for="phoneNumber">email</label>
+          <input type="email" id="email" v-model="email" class="form-control" required>
+        </div>
+        <div class="form-group">
           <label for="password">Password</label>
           <input type="password" id="password" v-model="password" class="form-control" required>
         </div>
@@ -19,8 +23,8 @@
           <input type="password" id="confirmPassword" v-model="confirmPassword" class="form-control" required>
         </div>
         <div class="form-group">
-          <label for="profilePicture">Profile Picture</label>
-          <input type="file" id="profilePicture" @change="handleFileUpload" accept="image/*">
+          <label for="profilePicture">Profile Picture</label><br>
+          <input class="btn btn-secondary" type="file" id="profilePicture" @change="handleFileUpload" accept="image/*">
         </div>
         <button type="submit" class="btn btn-primary">Save Changes</button>
       </form>
@@ -31,8 +35,9 @@
   export default {
     data() {
       return {
-        fullName: 'John Doe', // Set default full name
+        fullName: 'Epaphras Makoko', // Set default full name
         phoneNumber: '',
+        email: '',
         password: '',
         confirmPassword: '',
         profilePicture: null
@@ -40,7 +45,6 @@
     },
     methods: {
       updateProfile() {
-        // Check if password matches confirm password
         if (this.password !== this.confirmPassword) {
           alert('Passwords do not match');
           return;
@@ -91,8 +95,5 @@
     cursor: pointer;
   }
   
-  button:hover {
-    background-color: #0056b3;
-  }
   </style>
   

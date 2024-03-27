@@ -2,22 +2,20 @@
     <div class="login-page">
       <div class="container">
         <div class="row justify-content-center mt-5">
-          <div class="col-md-6">
-            <div class="card">
-              <figure>
-                <figcaption><strong>Student Registration Management System</strong></figcaption>
+          <div class="col-md-5">
+            <figure>
+                <figcaption><h5><strong>STUDENT REGISTRATION MANAGEMENT SYSTEM</strong></h5></figcaption>
                 <img src="@/assets/StudentLogo.png" alt="Logo" class="logo">
               </figure>
-              <h2 class="card-title">Login</h2>
+            <div class="card form1">
               <div class="card-body">
                 <form @submit.prevent="login" class="login-form">
+                  <h2 class="card-title">Login</h2>
                   <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" v-model="username" class="form-control" required>
+                    <input type="text" id="username" v-model="username" class="form-control" required placeholder="Username">
                   </div>
                   <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" v-model="password" class="form-control" required>
+                    <input type="password" id="password" v-model="password" class="form-control" required placeholder="Password">
                   </div>
                   <button type="submit" class="btn btn-primary btn-block">Login</button>
                 </form>
@@ -58,11 +56,14 @@
   }
   
   .login-form {
-    width: 400px;
+    width: 100%;
     padding: 40px;
     background-color: #e0e0e0;
     border-radius: 20px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  .form1 {
+    border: 0cap;
   }
   
   .logo {
@@ -79,26 +80,10 @@
     font-weight: bold;
   }
   
-  input[type="text"],
-  input[type="password"] {
-    width: 95%;
-    padding: 10px;
-    border: 1px solid #ced4da;
-    border-radius: 5px;
-  }
-  
   button {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
   }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
+
   </style>
   

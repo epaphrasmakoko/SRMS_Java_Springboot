@@ -2,10 +2,9 @@
 <template>
     <aside class="sidebar">
       <ul>
-        <!-- Sidebar links -->
         <li><router-link to="/dashboard">Dashboard</router-link></li>
+        <li><router-link to="/dashboard/enrolled-courses">Courses</router-link></li>
         <li><router-link to="/dashboard/student-profile">Profile</router-link></li>
-        <!-- Add more sidebar links as needed -->
       </ul>
     </aside>
   </template>
@@ -21,7 +20,7 @@
   .sidebar {
     background-color: #333;
     color: #fff;
-    padding: 1rem;
+    padding: 40px;
   }
   
   ul {
